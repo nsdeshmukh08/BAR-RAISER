@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import Header from './Header/Header';
+import ProjectList from './ProjectList/ProjectList';
+
 import './App.css';
+import 'antd/dist/antd.css';
 
 function App() {
+  const [query, setQuery] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header setQuery={setQuery}/>
+      <ProjectList query={query}/>
     </div>
   );
 }

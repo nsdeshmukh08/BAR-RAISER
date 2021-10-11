@@ -1,0 +1,27 @@
+.ProjectList {
+  border: 1px solid #c7c5c5;
+  margin: 20px auto;
+  padding: 10px;
+  list-style-type: none;
+  border-radius: 5px;
+  width: 60%;
+
+}
+
+.ProjectList__project{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #c7c5c5;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.ProjectList__time{
+  margin-right: 15px;
+}
+
+.ProjectList_empty{
+  display: flex;
+  justify-content: center;
+}
