@@ -6,10 +6,14 @@ import './ProjectList.css';
 
 const projectsInfo = getProjetsData();
 
-function ProjectList({query}) {
+function ProjectList({query=''}) {
   const [projects, setProjects] = useState(projectsInfo);
   const timerRef = useRef({});
   const queryRef = useRef(query);
+
+  useEffect(() =>{
+    setProjects(projectsInfo);
+  },[]);
 
    // Filter the projects as per the query entered.
   useEffect(()=>{
